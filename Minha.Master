@@ -1,0 +1,315 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Minha.Master.cs" Inherits="MasterPageNatal.Site1" %>
+<!DOCTYPE html>
+
+<html  lang="pt">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Boas Festas</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- custom javascript link  -->
+    <script src="js/script.js" defer></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- header  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-gifts"></i> Feliz Natal </a>
+
+    <nav class="navbar">
+        <a href="#home">Homepage</a>
+        <a href="#about">Quem Somos</a>
+       <a href="#gallery">Mensagens de Natal</a>
+        <a href="#message">Deixar Mensagem</a>
+       </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="Pesquisar..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    
+
+</header>
+
+<!-- header fim -->
+
+<!-- home  -->
+
+<section class="home" id="home">
+
+    <div class="slide active" style="background:url(images/home-bg-1.png) no-repeat; background-size: cover; background-position: center;">
+        <div class="content">
+            <span> HO - HO - HO!</span>
+             <h3> O Pai Natal <br>chegou!</h3>
+           </div>
+    </div>
+
+    <div class="slide" style="background:url(images/home-bg-2.png) no-repeat; background-size: cover; background-position: center;">
+        <div class="content">
+            <span> Feliz Natal!</span>
+            <h3>com muitas e muitas prendas</h3>
+                 </div>
+    </div>
+
+       <div class="slide" style="background:url(images/banner.jpg) no-repeat; background-size: cover; background-position: center;">
+        <div class="content">
+            <span><font color="white">E que neste Natal...</font></span>
+            <h3><font color="white">tu possas compartilhar amor e paz!</font></h3>
+                 </div>
+    </div>
+    <div id="next-slide" onclick="next()" class="fas fa-angle-right"></div>
+    <div id="prev-slide" onclick="prev()" class="fas fa-angle-left"></div>
+
+</section>
+
+<!-- home fim-->
+
+
+
+<!-- about  -->
+
+<section class="about" id="about">
+
+    <div class="image">
+        <img src="images/papai2.png" alt="">
+    </div>
+
+    <div class="content">
+        <div class="box">
+            <h1><font color="red">BOAS FESTAS!</font></h1>
+          
+            <p><font size ="3" color="#006400">
+                Que você possa sempre se lembrar do verdadeiro sentido do Natal: a comemoração do nascimento do menino Jesus.<br>
+                Que Deus abençoe o seu Natal e todos os dias do seu Ano Novo!<br>
+                O Amor é o melhor presente para oferecer a quem amamos. <br>Feliz Natal e um óptimo Ano Novo!</p></font>
+           
+        </div>
+        <div class="icons-container">
+            <div class="icons">
+                <i class="fas fa-tree"></i>
+                <p>Árvores de Natal</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-cookie"></i>
+                <p>Bolos e Bolachas</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-gifts"></i>
+                <p>Prendas</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- about fim -->
+
+<!-- banner   -->
+
+<section class="banner">
+
+    <div class="content">
+        <h3>A MAGIA DO NATAL</h3>
+        <a href="#" class="btn">A Árvore de Natal é a presença de uma Família feliz</a>
+    </div>
+
+</section>
+
+<!-- banner fim -->
+
+<!-- galeria   -->
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading"> Mensagens de Natal </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/gallery-img-1.jpg" alt="">
+            <div class="content">
+                <h3>"Feliz Natal!"</h3>
+                <p>"O maior presente é estar presente. Que neste Natal você possa se fazer presente para aqueles que mais Ama".</p>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/papa3.jpg" alt="">
+            <div class="content">
+                <h3>"Ho ho ho!"</h3>
+                <p>"Que este Natal seja uma fonte de Luz, Fé e Prosperidade na sua vida!"</p>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/gallery-img-3.jpg" alt="">
+            <div class="content">
+                <h3>"Amor e sorrisos!"</h3>
+                <p>"Desejo a todos um Natal repleto de Amor, reencontros e sorrisos."</p>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/gallery-img-4.jpg" alt="">
+            <div class="content">
+                <h3>"Semear a esperança!"</h3>
+                <p>"Natal é tempo de comemorar a Vida, espalhar o Amor e semear a Esperança." </p>
+               
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/gallery-img-5.jpg" alt="">
+            <div class="content">
+                <h3>"Saúde e Paz!"</h3>
+                <p>"Que a Saúde, a Paz e o Amor se reúnam para celebrar esta data mágica!"</p>
+               
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/gallery-img-6.jpg" alt="">
+            <div class="content">
+                <h3>"Feliz Natal!"</h3>
+                <p>"Que neste Natal possa matar a saudade de quem está longe e conviver com eles..."</p>
+                
+            </div>
+        </div>
+
+         <div class="box">
+            <img src="images/anao.jpg" alt="">
+            <div class="content">
+                <h3>"Que não nos falte amor!"</h3>
+                <p>"Que neste Natal possamos nos reunir com amor e respeito!"</p>
+                
+            </div>
+        </div>
+
+           <div class="box">
+            <img src="images/familia.jpg" alt="">
+            <div class="content">
+                <h3>"União das Famílias!"</h3>
+                <p>"Que neste Natal possa matar a saudade de quem está longe e conviver com eles.."</p>
+                
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- galeria fim -->
+
+<!-- Formulário -->
+
+<section class="message" id="message">
+
+    <form action="">
+        <h3>Deixe aqui a sua Mensagem</h3>
+        <input type="text" placeholder="Nome" class="box">
+        <input type="email" placeholder="e-mail" class="box">
+        <textarea name="" placeholder="mensagem" class="box" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="Enviar Mensagem" class="btn">
+    </form>
+
+</section>
+
+<!-- Formulário fim -->
+
+
+<!-- Serviços  -->
+
+<section class="service">
+
+    <h1 class="btn"><center> PROTEJA-SE A SI E AOS SEUS </center></h1>
+
+</section>
+
+<!-- Serviços fim -->
+<!-- categoria  -->
+<marquee>
+<section class="category">
+
+    <div class="box-container">
+
+        <a href="#" class="box">
+            <img src="images/category-1.png" alt="">
+            
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/category-2.png" alt="">
+            
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/category-3.png" alt="">
+           
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/category-4.png" alt="">
+           
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/category-5.png" alt="">
+           
+        </a>
+
+        <a href="#" class="box">
+            <img src="images/category-6.png" alt="">
+     
+	
+    </div>
+
+</section>
+</marquee>
+<!-- categoria fim -->
+
+<!-- footer  -->
+
+<section class="footer">
+
+        <div class="credit"> Criado por <span> Adriana Gama</span> | Todos os direitos reservados! </div>
+
+</section>
+
+<!-- footer fim -->
+
+
+
+    </form>
+
+
+</body>
+</html>
